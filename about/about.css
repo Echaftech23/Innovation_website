@@ -1,0 +1,93 @@
+/*-- Hero section --*/
+.hero{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    gap: 35px;
+    background-color: var(--background-color-1);
+    padding: 70px 16% 0;
+}
+.main-pad{
+    padding: 40px 16%;
+}
+.left{
+    flex-basis: 50%;
+}
+.right{
+    flex-basis: 34%;
+}
+.right img{
+    width: 100%;
+}
+
+.left h1{
+    font-size: 30px;
+    color: var(--heading-color);
+    font-weight: 600;
+}
+.left span{
+    color: #fff;
+}
+.left h3{
+    font-size: 18px;
+    color: var(--heading-color);
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+.left p{
+    font-size: 15px;
+    line-height: 30px;
+}
+.right img{
+    width: 140%;
+}
+
+/*-- who are we section --*/
+.about{
+    background-color: var(--background-color-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about img{
+    width: 40%;
+}
+.about .right{
+    flex-basis: 60%;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+.about .right h3{
+    font-size: 28px;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.about .right p{
+    line-height: 35px;
+}
+
+/*-- What Sets Us Apart --*/
+.sets h3{
+    font-size: 24px;
+    color: var(--heading-color);
+    font-weight: 600;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.sets .row{
+    display: flex;
+    align-items: flex-start;
+    background-color: #E6E6E6;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.sets .row img{
+    width: 80px;
+    margin-right: 20px;
+}
+.sets .row p{
+    padding-top: 15px;
+    line-height: 30px;
+}

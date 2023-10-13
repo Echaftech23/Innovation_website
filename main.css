@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,900;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: B612;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --background-color-1: #F5DD98;
+    --background-color-2: #FFF5ED;
+    --heading-color: #02073E;
+    --text-color: #343D48;
+    --second-color: #0A8080;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.main-pad{
+    padding: 40px 16%;
+}
+.team{
+    padding: 70px 16% 50px;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 16%;
+    background-color: var(--background-color-1);
+    position: fixed;
+    z-index: 1000;
+}
+header a{
+    color: var(--heading-color);
+    font-size: 14px;
+    font-weight: 600;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.logo{
+    width: 35px;
+}
+.logo img{
+    width: 100%;
+}
+.logo-title{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0 30px 0 10px;
+}
+.navbar ul{
+    padding-right: 20px;
+}
+.navbar ul li{
+    display: inline-block;
+    padding-left: 35px;
+    position: relative;
+} 
+.navbar ul li:nth-child(2)::after, .navbar ul li:nth-child(3)::after{
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: -15px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #000 transparent transparent;
+}
+.navbar ul li a:hover, .buttons a:first-child:hover{
+    color: var(--second-color);
+}
+.buttons a:nth-child(2){
+    margin-left: 20px;
+    color: var(--second-color);
+    position: relative;
+}
+.buttons a .line{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -6px;
+    left: 0;
+}
+
+/* -- Subscription section -- */
+.subscription{
+    padding: 50px 0;
+    background-image: url(./images/banner-1.png);
+    background-color: var(--background-color-2);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.sub-content{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 10px 15%;
+    padding:30px;
+}
+.sub-content .left{
+    flex-basis: 50%;
+}
+.sub-content .left h3{
+    color: var(--heading-color);
+}
+.sub-content .right{
+    flex-basis: 50%;
+    align-self: center;
+}
+.subscription .right form .email{
+    width: 50%;
+    padding: 10px;
+    background-color: #EFF3F7;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+.subscription .right button{
+    padding: 10px 20px;
+    color: #fff;
+    background-color:#DB4A87;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+} 
+.subscription .right span{
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+/* -- footer -- */
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    font-size: 14px;
+    line-height: 30px;
+}
+footer .col-1, .col-2, .col-3, .col-4, .col-5{
+    width: 20%;
+}
+footer .container a{
+    display: block;
+    color: #000;
+}
+footer .container .col-1 a:first-child{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: -2px;
+    padding-bottom: 20px;
+}
+footer .container .logo{
+    padding-right: 10px;
+    width: 45px;
+}
+footer .container h4{
+    padding-bottom: 28px;
+}
+footer .container .col-5 a{
+    display: flex;
+    align-items: center;
+}
+footer .container .col-5 a img{
+    padding-right: 5px;
+    width: 22px;
+}

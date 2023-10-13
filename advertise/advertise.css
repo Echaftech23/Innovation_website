@@ -1,63 +1,97 @@
-/* -- hero section -- */
+/*-- Hero section --*/
 .hero{
-    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    gap: 40px;
     background-color: var(--background-color-1);
-    height: 96vh;
-    position: relative;
+    padding: 70px 16% 0;
 }
-section .hero-content{
-    padding-top: 60px;
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 45px;
+.main-pad{
+    padding: 40px 16%;
 }
-section .hero-content h1{
-    padding-top: 20px;
-    font-size: 30px;
-    color: var(--heading-color);
+.left{
+    flex-basis: 44%;
 }
-section .hero-content button{
-    background-color: var(--second-color);
-    padding: 10px 25px;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
+.left p{
+    margin: 15px 0;
 }
-section .hero-content img{
-    width: 50%;
-    position: absolute;
-    top:40%;
-    left: 50%;
-    transform: translate(-50%, 16%);
+.right{
+    flex-basis: 40%;
 }
-/* Paddings */
-.pd1{
-    padding: 70px 0;
-}
-.pd2{
-    padding:0 0 40px;
+.right img{
+    width: 100%;
 }
 
-/* -- Services section -- */
-.services{
+.left h1{
+    font-size: 30px;
+    color: var(--heading-color);
+    font-weight: 600;
+}
+.left p{
+    font-size: 15px;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+.hero .left a{
+    padding: 10px 25px;
+    background-color: #4F3926;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+}
+.heo .left a:hover{
+    background-color: #8d4140;
+}
+.right img{
+    width: 130%;
+}
+.services-sec{
+    background-color: var(--background-color-1);
+    padding: 120px 16% 90px;
+}
+.services-sec .container{
+    display: flex;
+    justify-content: space-between;
+}
+.services-sec .left{
+    flex-basis: 51%;
+}
+.services-sec .left h3{
+    font-size: 30px;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+}
+
+.services-sec .container img{
+    width: 380px;
+    height: 300px;
+}
+.row-rev{
+    padding-top: 140px;
+    flex-direction: row-reverse;
+}
+
+/* -- Analytics section -- */
+.analytics{
     background-color: var(--background-color-2);
 }
-.title, .description{
-    width: 60%;
-    margin: auto;
+.analytics .description{
     text-align: center;
     line-height: 30px;
+    padding-bottom: 40px;
 }
-.services .title, .left h3{
-    font-size: 24px;
-    color: var(--heading-color);
+.analytics .container{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
 }
-.services .description, .lef p{
-    font-size: 15px;
-    line-height: 28px;
-    padding-top: 10px;
+.analytics .item span{
+    font-size: 18px;
+    font-weight: 700;
 }
+
+/* - other Services to appriciate section -- */
 .items{
     display: flex;
     align-items: center;
@@ -66,6 +100,19 @@ section .hero-content img{
     row-gap: 60px;
     flex-wrap: wrap;
 }
+.color{
+    background-color: hsl(219, 92%, 98%);
+}
+.pd2{
+    padding:0 0 40px;
+}
+.items .title, .items .description{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    line-height: 30px;
+}
+
 .items .service-item{
     width: 31%;
     display: flex;
@@ -80,59 +127,7 @@ section .hero-content img{
     font-size: 14px;
     color: var(--text-color);
 }
-small{
-    display: block;
-    color: #7E8896;
-}
-.qoute p ,.qoute small{
-    width: 70%;
-    margin: auto;
-    line-height: 30px;
-}
-
-/* -- banner -- */
-.banner{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-top: 1px solid #7E8896;
-    padding: 20px 0;
-    position: relative;
-}
-.banner::after{
-    content: "";
-    position: absolute;
-    background-color: #4F3926;
-    width: 100px;
-    height: 1px;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-.banner img{
-    width: 60px;
-}
-
-/* -- Team section -- */
-.team-item{
-    width: 30%;
-}
-.team-item .developer{
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.social-icon img{
-    width: 14px;
-    margin-top: 4px;
-}
-.team{
-    padding: 70px 16% 50px;
-}
-.color{
-    background-color: hsl(219, 92%, 98%);
-}
-.item-description a, .left a{
+.item-description a, .explore{
     display: block;
     font-size: 13px;
     margin-top: 20px;
