@@ -118,3 +118,15 @@
     background-color: #000;
     color: #fff;
 }
+/* -- Media queries -- */
+@media only screen and (max-width: 768px) {
+    .hero{
+        padding: 40px 4%;
+    }
+    .hero .left, .hero .right{
+        flex-basis: 100%;
+    }
+    .hero .right img{
+        width: 100%;
+    }
+}

@@ -1,0 +1,73 @@
+:root{
+    --background-color-1: #F5DD98;
+    --background-color-2: #FFF5ED;
+    --heading-color: #02073E;
+    --second-color: #0A8080;
+}
+.login{
+    display: flex;
+    margin-top: 70px;
+    z-index: 10;
+}
+.login .left{
+    flex-basis: 40%;
+    background-color: var(--second-color);
+    position: relative;
+}
+
+.login .right{
+    flex-basis: 60%;
+    background-color: #edf4f4;
+    padding: 30px 40px;
+}
+.login .right h2{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 35px;
+    color: var(--heading-color);
+}
+.login .right .input-pd{
+    display: block;
+    width: 90%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+}
+.input-pd:focus{
+    outline:none;
+}
+.input-pd:focus-within{
+    background-color: #cae2fe;
+}
+.login .right div label{
+    padding-left: 5px;
+}
+.login .right .forgot-pwd{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.login .right .forgot-pwd a{
+    color: #000;
+}
+.login .right button{
+    width: 90%;
+    padding: 10px 20px;
+    background-color: var(--second-color);
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.login .right button:hover{
+    background-color: #047070;
+}
+.login .right p{
+    padding-top: 10px;
+}
+.register{
+    padding-left: 5px;
+}

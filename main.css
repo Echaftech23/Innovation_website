@@ -11,7 +11,6 @@
     --background-color-1: #F5DD98;
     --background-color-2: #FFF5ED;
     --heading-color: #02073E;
-    --text-color: #343D48;
     --second-color: #0A8080;
 }
 a{
@@ -89,6 +88,9 @@ header a{
     bottom: -6px;
     left: 0;
 }
+.menu, .close{
+    display: none;
+}
 
 /* -- Subscription section -- */
 .subscription{
@@ -134,7 +136,11 @@ header a{
     border-radius: 5px;
     margin-left: 5px;
     margin-bottom: 10px;
+    cursor: pointer;
 } 
+.subscription .right button:hover{
+    background-color:#bf2b69;
+}
 .subscription .right span{
     font-size: 14px;
     margin-left: 5px;
@@ -178,4 +184,21 @@ footer .container .col-5 a{
 footer .container .col-5 a img{
     padding-right: 5px;
     width: 22px;
+}
+/* -- Media queries -- */
+@media only screen and (max-width: 768px) {
+    header{
+        padding: 5px 4%; 
+    }
+    .navbar ul, .buttons, .close{
+        display: none;
+    }
+    .menu, .close{width: 30px;}
+    .menu{
+        display: block;
+        width: 30px;
+        position: absolute;
+        right: 20px;
+        top : 15px
+    }
 }
