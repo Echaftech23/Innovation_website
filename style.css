@@ -150,6 +150,9 @@ small{
     border-bottom: 1px solid #343D48;
     position: relative;
 }
+.team .top a{
+    color: #000;
+} 
 .team .top::after{
     content: '';
     position: absolute;
