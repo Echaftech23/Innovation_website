@@ -195,6 +195,12 @@
 }
 
 /* -- Blog section -- */
+.info .title, .info .description {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    line-height: 30px;
+}
 .blog-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr) ;
