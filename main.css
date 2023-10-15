@@ -90,6 +90,7 @@ header a{
 }
 .menu, .close{
     display: none;
+    visibility: hidden;
 }
 
 /* -- Subscription section -- */
@@ -107,7 +108,7 @@ header a{
     gap: 30px;
     background-color: #fff;
     border-radius: 8px;
-    margin: 10px 15%;
+    margin: 10px 16%;
     padding:30px;
 }
 .sub-content .left{

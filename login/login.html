@@ -15,26 +15,64 @@
     <link rel="stylesheet" href="../main.css" />
   </head>
   <body>
-    <!-- login section -->
-    <section class="login main-pad">
-      <div class="left">
-        <img src="../images/login.png" alt="audience" />
+    <header class="header">
+      <nav class="navbar">
+        <a href="../index.html" class="logo">
+          <img src="../images/logo.png" alt="logo" />
+        </a>
+        <a href="../index.html" class="logo-title">Innovation</a>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../advertise/advertise.html">Advertise</a></li>
+          <li><a href="../support/support.html">Support</a></li>
+          <li><a href="../about/about.html">About</a></li>
+        </ul>
+      </nav>
+      <div class="buttons">
+        <a href="../login/login.html">Login</a>
+        <a href="../index.html"
+          >Get Started <img src="../images/line.png" alt="line" class="line" />
+        </a>
       </div>
-      <div class="right">
-        <h2>Login</h2>
-        <form action="Post">
-          <label for="email">Email</label>
-          <input type="text" id="email" placeholder="Enter Your Email." class="input-pd" required>
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter Your Password." class="input-pd" required>
-          <div class="forgot-pwd">
-            <div><input type="checkbox" id="check"><label for="check">Remember</label></div>
-            <a href="./login.html">Forgot Password?</a>
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-        <p>Don't have an account?<a href="../sign-up.html" class="register">Register</a></p>
-      </div>
+    </header>
+
+    <!-- Sign in section -->
+    <section class="sign-in">
+        <div class="left">
+          <img src="../images/login.png" alt="sign in" />
+        </div>
+        <div class="right">
+          <h2>Sign In</h2>
+          <form action="Post">
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Enter Your Email" class="input-pd" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter Your Password" class="input-pd" required>
+            <div class="forgot-pwd">
+              <div><input type="checkbox" id="check"><label for="check">Remember</label></div>
+              <a href="./login.html">Forgot Password?</a>
+            </div>
+            <button type="submit">Sign In</button>
+          </form>
+          <p>Don't have an account?<input type="button" value=" Sign up" class="first-btn"/></p>
+        </div>
+    </section>
+
+    <!-- Sign up section -->
+    <section class="hide-section sign-up">
+        <div class="left">
+          <img src="../images/sign-up.png" alt="sign up" class="aa"/>
+        </div>
+        <div class="right">
+          <h2>Sin Up</h2>
+          <form action="Post">
+            <input type="text" placeholder="Enter Your Name" class="input-pd" required>
+            <input type="text" placeholder="Enter Your Email" class="input-pd" required>
+            <input type="password" placeholder="Password" class="input-pd" required>
+            <button type="submit" class="sign-up_btn">Sign Up</button>
+          </form>
+          <p>Already have an account?<input type="button" value=" Sign in" class="second-btn"/></p>
+        </div>
     </section>
 
     <!-- footer -->
@@ -79,5 +117,8 @@
           </div>
       </div>
     </footer>
+
+    <!-- file js -->
+    <script src="../js/file.js"></script>
   </body>
 </html>
