@@ -90,12 +90,21 @@
           can provide quick and efficient service.
         </p>
         <div class="user-name">
-          <input type="text" placeholder="first Name">
-          <input type="text" placeholder="Last Name">
+          <div>
+            <label for="first-name">First Name</label><br>
+            <input type="text" id="first-name" placeholder="first Name">
+          </div>
+          <div>
+            <label for="last-name">Last Name</label><br>
+            <input type="text" id="last-name" placeholder="Last Name">
+          </div>
         </div>
-        <input type="text" placeholder="Your Email  address ">
-        <input type="text" placeholder="Subject">
-        <textarea cols="30" rows="4" placeholder="Message" style="resize: none;"></textarea>
+        <label for="email"></label>Email<br>
+        <input type="text" id="email" placeholder="Your Email  address ">
+        <label for="subject"></label>Subject<br>
+        <input type="text" id="subject" placeholder="Subject">
+        <label for="message"></label>Message<br>
+        <textarea cols="30" rows="4" id="message" placeholder="Message" style="resize: none;"></textarea>
         <button type="submit">submit</button>
       </form>
     </section>
