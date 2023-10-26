@@ -10,29 +10,43 @@
 
     <!-- file of repetitive propertises  -->
     <link rel="stylesheet" href="../main.css" defer>
+    
     <!-- file js -->
-    <script src="../js/file.js" defer></script>
+    <script src="../main.js" defer></script>
+    <script src="./login.js" defer></script>
+
   </head>
   <body>
     <header class="header">
       <nav class="navbar">
-        <a href="../index.html" class="logo">
-          <img src="../images/logo.webP" alt="logo" width="100%" height="40px">
-        </a>
+        <a href="../index.html" class="logo"><img src="../images/logo.webP" alt="logo"></a>
         <a href="../index.html" class="logo-title">Innovation</a>
-        <ul>
+        <ul class="ul menu">
           <li><a href="../index.html">Home</a></li>
-          <li><a href="../advertise/advertise.html">Advertise</a></li>
-          <li><a href="../support/support.html">Support</a></li>
+          <li class="advertise"><a>Advertise <img src="../images/arrow_down.webp" alt="arrow down image" width="12px"></a>
+            <ul class="drop-container">
+              <li><a href="../advertise/advertise.html">Advertise</a></li>
+              <li><a href="../advertise/advertise.html">Service 1</a></li>
+              <li><a href="../advertise/advertise.html">service 2</a></li>
+            </ul>
+        </li>
+        <li class="support"><a>Support <img src="../images/arrow_down.webp" alt="arrow down image" width="12px"></a>
+          <ul class="drop-container">
+            <li><a href="../support/support.html">Support</a></li>
+            <li><a href="../support/support.html">Contact Us</a></li>
+            <li><a href="../support/support.html">Address</a></li>
+          </ul>
+        </li>
           <li><a href="../about/about.html">About</a></li>
         </ul>
       </nav>
-      <div class="buttons">
-        <a href="../login/login.html">Login</a>
-        <a href="../index.html"
-          >Get Started <img src="../images/line.webP" alt="line" class="line">
-        </a>
+      <div class="buttons menu">
+        <a href="./login.html">Login</a>
+        <a href="../get-started/get-started.html">Get Started <img src="../images/line.webP" alt="line" class="line"></a>
       </div>
+      <!-- menu Buttons -->
+      <button class="menu-icon"><img src="../images/menu.webP" alt="menu icon" width="35px"></button>
+      <button class="close-icon menu"><img src="../images/close.webP" alt="menu icon" width="25px"></button>
     </header>
 
     <!-- Sign in section -->
@@ -42,35 +56,30 @@
         </div>
         <div class="right">
           <h3>Sign In</h3>
-          <form action="Post">
-            <label for="email">Email</label>
-            <input type="text" id="email" placeholder="Enter Your Email" class="input-pd" required>
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter Your Password" class="input-pd" required>
-            <div class="forgot-pwd">
-              <div><input type="checkbox" id="check"><label for="check">Remember</label></div>
-              <a href="./login.html">Forgot Password?</a>
-            </div>
-            <button type="submit">Sign In</button>
-          </form>
-          <p>Don't have an account?<input type="button" value=" Sign up" class="first-btn"></p>
-        </div>
-    </section>
+          <form id="form">
+              <label for="email">Email</label>
+              <div class="form-control">
+                <input type="text" id="email" placeholder="Enter Your Email" class="input-pd">
+                <img src="../about/about-images/error.png" alt="error message" class="error-mg" width="20px;">
+                <img src="../about/about-images/success.png" alt="success message" class="success-mg" width="20px;">
+                <small>Error message</small>
+              </div>
 
-    <!-- Sign up section -->
-    <section class="hide-section sign-up">
-        <div class="left">
-          <img src="../images/sign-up.webP" alt="sign up" class="aa">
-        </div>
-        <div class="right">
-          <h3>Sin Up</h3>
-          <form action="Post">
-            <input type="text" placeholder="Enter Your Name" class="input-pd" required>
-            <input type="text" placeholder="Enter Your Email" class="input-pd" required>
-            <input type="password" placeholder="Password" class="input-pd" required>
-            <button type="submit" class="sign-up_btn">Sign Up</button>
+              <label for="password">Password</label>
+              <div class="form-control">
+                <input type="text" id="username" style="display: none;" autocomplete="Username">
+                <input type="password" id="password" placeholder="Enter Your Password" class="input-pd">
+                <img src="../about/about-images/error.png" alt="error message" class="error-mg" width="20px;">
+                <img src="../about/about-images/success.png" alt="success message" class="success-mg" width="20px;">
+                <small>Error message</small>
+              </div>
+              <div class="forgot-pwd">
+                <div><input type="checkbox" id="check"><label for="check"> Remember me</label></div>
+                <a href="./login.html">Forgot Password?</a>
+              </div>
+            <button id="submit">Sign In</button>
           </form>
-          <p>Already have an account?<input type="button" value=" Sign in" class="second-btn"></p>
+          <p>Don't have an account?<a href="../get-started/get-started.html" class="first-btn"> Sign up</a></p>
         </div>
     </section>
 

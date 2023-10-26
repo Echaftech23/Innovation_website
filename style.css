@@ -24,6 +24,8 @@ section .hero-content button{
     border-radius: 4px;
     color: #fff;
     cursor: pointer;
+    position: relative;
+    z-index: 10;
 }
 section .hero-content button:hover{
     background-color: #047070;
@@ -62,28 +64,72 @@ section .hero-content img{
     line-height: 28px;
     padding-top: 10px;
 }
-.items{
+/* srvices Cards */
+.service-container{
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    row-gap: 60px;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 40px;
+    width: 100%;
 }
-.items .service-item{
-    width: 31%;
+.service-container .card{
+    position: relative;
+    width: 30%;
     display: flex;
+    max-height: 180px;
+    transition: max-height 1s ease;
 }
-.service-item img{
+.service-container .card .content{
+    position: relative;
+    overflow: hidden;
+}
+.service-container .card img{
     width: 40px;
     height: 40px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
-.service-item p{
+.service-container .card .content p{
     padding-top: 10px ;
     font-size: 14px;
     color: var(--text-color);
+    line-height: 25px;
 }
+.service-container .card .content::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(transparent,#FFF5ED) ;
+}
+.service-container .card.active .content::before{
+    display: none;
+}
+.service-container .card .more{
+    position: absolute;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    cursor: pointer;
+    bottom: -30px;
+    left: 22%;
+    color: #3183FF;
+}
+.service-container .card .more::before{
+    content: 'Read More';
+    
+}
+.service-container .card.active .more::before{
+    content: 'Read Less';
+}
+.service-container .card.active{
+    max-height: 550px;
+}
+.item-description.active .more::before{
+    display: none;
+} 
 small{
     display: block;
     color: #7E8896;
@@ -96,12 +142,20 @@ small{
 
 /* -- banner -- */
 .banner{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     border-top: 1px solid #7E8896;
-    padding: 20px 0;
+    padding: 40px 0 0;
     position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@keyframes slide{
+    form{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+    
 }
 .banner::after{
     content: "";
@@ -113,25 +167,20 @@ small{
     left: 50%;
     transform: translate(-50%,-50%);
 }
+.banner .slide{
+    display: inline-block;
+    animation: 15s slide infinite linear;
+}
+.banner:hover .slide{
+    animation-play-state: paused;
+}
 .banner img{
     width: 60px;
+    margin: 0 50px;
 }
-
-/* -- Team section -- */
+ /* -- Team section -- */
 .team-item{
     width: 30%;
-}
-.team-item .developer{
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.social-icon img{
-    width: 14px;
-    margin-top: 4px;
-}
-.team{
-    padding: 70px 16% 50px;
 }
 .color{
     background-color: hsl(219, 92%, 98%);
@@ -202,7 +251,77 @@ small{
 .team .right .right-img{
     width: 100%;
 }
+/* SLide show  */
+
+.team-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card__content{
+    margin-inline: 2.75rem;
+    overflow: hidden;
+}
+.card__article{
+    width: 300px;
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+.developer{
+    width: 100%;
+    margin: 0 auto;
+}
+.card_data{
+    margin-top: .7rem;
+}
+.card_data .name{
+    font-size: 16px;
+}
+.card__discription{
+    font-size: 14px;
+    padding: 5px 0;
+}
+.github{
+    margin: 0 5px;
+}
+.card__button{
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #000;
+    font-weight: 600;
+}
+.card__button:hover{
+    color: #fcfbfb;
+    background-color: #E14984;
+}
+
+/* Swiper class */
+.swiper-button-prev::after , .swiper-button-next::after{
+    content: '';
+}
+.swiper-button-prev, .swiper-button-next{
+    width: 30px;
+    height: 30px;
+    top: 35%;
+}
+.arrow{
+    width: 100%;
+}
+.swiper-button-prev{
+    left: 0;
+}
+.swiper-button-next{
+    right: 0;
+}
+
 /* -- Blog section -- */
+.blog{
+    background-color: #F5F8FF;
+}
 .blog-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr) ;
@@ -277,12 +396,12 @@ small{
         width: 100%;
     }
     section .hero-content{
+        padding-top: 20px;
         text-align: left;
         margin: 0;
         min-width: 85%;
     }
     section .hero-content h1{
-        padding-top: 50px;
         margin-bottom: 20px;
         font-size: 28px;
         color: var(--heading-color);
@@ -296,10 +415,11 @@ small{
         padding: 8px 15px;
         font-size: 13px;
     }
-    section .hero-content img{
+    section .hero-content img {
         min-width: 90%;
+        height: 46vh;
         position: absolute;
-        top:71%;
+        top: 48%;
         left: 48%;
         transform: translate(-50%, 16%);
     }
@@ -317,17 +437,15 @@ small{
     .services .description, .lef p{
         font-size: 14px;
     }
-    .items .service-item{
-        justify-content: flex-start ;
+    .service-container ,.card{
         flex-basis: 95%;
+        margin-block: 20px;
     }
-    .items .service-item .item-description{
-        flex-basis: 79%;
-        line-height: 26px;
+    .service-container .card .content p{
+        line-height: 30px;
     }
-    .service-item img{
-        min-width: 20px;
-        margin-right: 10px;
+    .card img{
+        min-width: 30px;
     }
     .qoute img{
         width: 60px;
@@ -344,7 +462,15 @@ small{
         width: 60px;
     }
     .banner img{
-        width: 40px;
+        width: 60px;
+        margin: 0 40px;
+    }
+    /* swiper section */
+    .card__content{
+        margin-inline: 1.75rem;
+    }
+    .swiper-button-prev, .swiper-button-next{
+        display: none;
     }
     /* -- Team section -- */
     .team-item{

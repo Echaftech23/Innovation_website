@@ -1,0 +1,159 @@
+section{
+    display: flex;
+    align-items: center;
+    margin-block: 120px 0;
+    padding: 20px 16%;
+    flex-direction: row-reverse;
+} 
+
+.left{
+    display: flex;
+    align-items: center;
+    flex-basis: 40%;
+    background-color: var(--second-color);
+    height: 457px;
+}
+.left img{
+    width: 100%;
+}
+.right{
+    flex-basis: 60%;
+    background-color: #c5d7ff;
+    padding: 10px 40px;
+    position: relative;
+    height: 456px;
+    overflow: hidden;
+}
+.right h3{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 35px;
+    color: var(--heading-color);
+}
+.right::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: -120px;
+    left: -130px;
+    background-color: #F5DD98;
+    clip-path: circle(50% at 50% 50%);
+}
+.right::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: -50px;
+    right: -50px;
+    background-color: #ee3c5d;
+    clip-path: circle(50% at 50% 50%);
+}
+.right .input-pd{
+    display: block;
+    width: 90%;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    outline: none;
+    margin-block: 5px;
+}
+.form-control{
+    position: relative;
+}
+.form-control img{
+    position: absolute;
+    bottom: 53%;
+    right: 50px;
+    visibility: hidden;
+}
+small{
+    display: block;
+    visibility: hidden;
+}
+input:focus{
+    border-color: #0A8080 !important;
+}
+.form-control.error small{
+    color: #e74c3c;
+    visibility: visible;
+}
+.form-control.error input{
+    border-color: #e74c3c !important;
+}
+.form-control.error .error-mg{
+    visibility: visible;
+}
+.form-control.success .success-mg{
+    visibility: visible;
+}
+.form-control.success input{
+    border-color: #41AD49 !important;
+}
+.right form button{
+    width: 90%;
+    padding: 10px 20px;
+    background-color: var(--second-color);
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+#submit{
+    margin-top: 5px;
+}
+.right form button:hover{
+    background-color: #047070;
+}
+.right p{
+    padding-top: 10px;
+}
+.right p a{
+    border: none;
+    background-color: transparent;
+    color: dodgerblue;
+    cursor: pointer;
+} 
+
+@media only screen and (max-width: 768px) {
+    section{
+        align-items: flex-start;
+        margin-block: 90px 0;
+        padding: 0 6% ;
+    }
+    .left{
+        display: none;
+    }
+    .right{
+        padding: 30px 20px;
+        min-width: 100%;
+    }
+    .right h3 {
+        font-size: 30px;
+    }
+     form{
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .sign-up .right .input-pd {
+        margin-bottom: 5px;
+    }
+    .sign-in .right::after, .sign-up .right::after {
+        content: "";
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        top: -90px;
+        right: -90px;
+    }
+    .form-control img {
+        position: absolute;
+        bottom: 63%;
+        right: 40px;
+    }
+    .form-control.error small{
+        margin-bottom: 20px;
+    }
+}

@@ -6,6 +6,7 @@
     gap: 35px;
     background-color: var(--background-color-1);
     padding: 70px 16% 0;
+    flex-wrap: wrap;
 }
 .left{
     flex-basis: 50%;
@@ -58,9 +59,10 @@
     justify-content: space-between;
     gap: 30px;
     padding-top: 60px;
+    flex-wrap: wrap;
 }
 .contact-info .location, .contact-info .phone, .contact-info .email{
-    flex-basis: 30%;
+    flex-basis: 29%;
     text-align: center;
 } 
 .contact-info  img{
@@ -125,11 +127,47 @@
 @media only screen and (max-width: 768px) {
     .hero{
         padding: 40px 4%;
+        align-items: flex-end;
+        justify-content: center;
     }
-    .hero .left, .hero .right{
+    .hero .left{
+        flex-basis: 100%;
+    }
+    .hero .right{
         flex-basis: 100%;
     }
     .hero .right img{
+        display: block;
+        width: 75%;
+        margin: auto;
+    }
+     /* contact section */
+     .contact h3 {
+        font-size: 21px;
+        width: 84%;
+        margin: auto;
+    }
+    .contact form{
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .contact form .user-name{
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    .contact form .user-name div {
         width: 100%;
     }
+    .accordion .content-box .label {
+        font-size: 13px;
+    }
+    .contact p {
+        font-size: 14px;
+        max-width: 90%;
+        line-height: 25px;
+    }
+    /* -- innovation info section -- */
+    .contact-info .location, .contact-info .phone, .contact-info .email{
+        flex-basis: 100%;
+    } 
 }

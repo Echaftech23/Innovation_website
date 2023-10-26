@@ -7,40 +7,58 @@
     <title>About Page</title>
 
     <link rel="shortcut icon" href="../images/logo.webP" type="image/x-icon">
-    <link rel="stylesheet" href="./about.css">
     
     <!-- file of repetitive propertises  -->
     <link rel="stylesheet" href="../main.css">
+
+    <link rel="stylesheet" href="./about.css">
+
+    <!-- file js -->
+    <script src="../main.js" defer></script>
+    <script src="./about.js" defer></script>
 
 </head>
 <body>
   <header class="header">
     <nav class="navbar">
-      <a href="../index.html" class="logo">
-        <img src="../images/logo.webP" alt="logo">
-      </a>
+      <a href="../index.html" class="logo"><img src="../images/logo.webP" alt="logo"></a>
       <a href="../index.html" class="logo-title">Innovation</a>
-      <ul>
+      <ul class="ul menu">
         <li><a href="../index.html">Home</a></li>
-        <li><a href="../advertise/advertise.html">Advertise</a></li>
-        <li><a href="../support/support.html">Support</a></li>
+        <li class="advertise"><a>Advertise <img src="../images/arrow_down.webp" alt="arrow down image" width="12px"></a>
+          <ul class="drop-container">
+            <li><a href="../advertise/advertise.html">Advertise</a></li>
+            <li><a href="../advertise/advertise.html">Service 1</a></li>
+            <li><a href="../advertise/advertise.html">service 2</a></li>
+          </ul>
+      </li>
+      <li class="support"><a>Support <img src="../images/arrow_down.webp" alt="arrow down image" width="12px"></a>
+        <ul class="drop-container">
+          <li><a href="../support/support.html">Support</a></li>
+          <li><a href="../support/support.html">Contact Us</a></li>
+          <li><a href="../support/support.html">Address</a></li>
+        </ul>
+      </li>
         <li><a href="../about/about.html">About</a></li>
       </ul>
     </nav>
-    <div class="buttons">
+    <div class="buttons menu">
       <a href="../login/login.html">Login</a>
-      <a href="../index.html">Get Started <img src="../images/line.webP" alt="line" class="line"></a>
+      <a href="../login/login.html">Get Started <img src="../images/line.webP" alt="line" class="line"></a>
     </div>
+    <!-- menu Buttons -->
+    <button class="menu-icon"><img src="../images/menu.webP" alt="menu icon" width="35px"></button>
+    <button class="close-icon menu"><img src="../images/close.webP" alt="menu icon" width="25px"></button>
   </header>
     <!-- Hero section -->
     <section class="hero">
         <div class="left">
             <h1>Welcome to <span>Innovations</span></h1>
             <h3>your destination for online innovation!</h3>
-            <p>a company offering a rich web experience to visitors. Feel free to customize it according to the specific details and values of your company.</p>
+            <p class="parag">a company offering a rich web experience to visitors. Feel free to customize it according to the specific details and values of your company.</p>
         </div>
         <div class="right">
-            <img src="../about/about-images/background-1.webP" alt="hero image">
+            <img src="../about/about-images/Collab-pana.png" alt="hero image">
         </div>
     </section>
     
@@ -49,37 +67,153 @@
             <img src="../about/about-images/background-2.webP" alt="about us">
             <div class="right">
                 <h3>who  are we ?</h3>
-                <p> we are more than just a technology company; we are architects of digital experiences, creators of innovation, and advocates for a web that transcends expectations. Established with a vision to redefine online interactions, we have dedicated ourselves to providing a rich and immersive web experience to every visitor.</p>
+                <p> we are more than just a technology company; we are architects of digital experiences,
+                   creators of innovation, and advocates for a web that transcends expectations.
+                    Established with a vision to redefine online interactions,
+                     we have dedicated ourselves to providing a rich and immersive web experience to every visitor.</p>
             </div>
+            
     </section>
 
     <!-- What Sets Us Apart -->
     <section class="sets main-pad">
         <h3>What Sets Us Apart</h3>
+
         <div class="row">
-            <img src="../images/check.webP" alt="check icon">
-            <div>
-                <h4>Innovation at the Core</h4>
-                 <p>At Company X, innovation is not just a buzzword; it's the core of our identity. We thrive on pushing boundaries, exploring new technologies, and staying ahead of the curve. Our team of skilled professionals is passionate about crafting solutions that go beyond the ordinary.</p>
-            </div>
+          <input type="checkbox" name="checkbox" id="first" class="input">
+          <label for="first" class="row-label">+</label>
+          <img src="../images/check.webP" alt="check icon">
+          <div class="content">
+              <h4>Innovation at the Core</h4>
+                <p> 
+                  At Company X, innovation is not just a buzzword; it's the core of our identity. 
+                  We thrive on pushing boundaries, exploring new technologies, and staying ahead of the curve.
+                  <p>
+                    Our team of skilled professionals is passionate about crafting solutions that go beyond the ordinary.
+                    At Company X, innovation is not just a buzzword; innovation is not just a buzzword; it's the core of our identity.
+                    At Company X, innovation is not just a buzzword; it's the core of our identity. 
+                  </p> 
+                  <p>
+                    Our team of skilled professionals is passionate about crafting solutions that go beyond the ordinary.
+                    We thrive on pushing boundaries, exploring new technologies, and staying ahead of the curve.
+                  </p>
+                </p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <input type="checkbox" name="checkbox" id="second" class="input">
+          <label for="second" class="row-label">+</label>
+          <img src="../images/check.webP" alt="check icon">
+          <div class="content">
+              <h4>Innovation at the Core</h4>
+                <p> 
+                  At Company X, innovation is not just a buzzword; it's the core of our identity. 
+                  We thrive on pushing boundaries, exploring new technologies, and staying ahead of the curve.
+                  <p>
+                    Our team of skilled professionals is passionate about crafting solutions that go beyond the ordinary.
+                    At Company X, innovation is not just a buzzword; innovation is not just a buzzword; it's the core of our identity.
+                    At Company X, innovation is not just a buzzword; it's the core of our identity. 
+                  </p> 
+                  <p>
+                    Our team of skilled professionals is passionate about crafting solutions that go beyond the ordinary.
+                    We thrive on pushing boundaries, exploring new technologies, and staying ahead of the curve.
+                  </p>
+                </p>
+          </div>
         </div>
 
         <div class="row">
-            <img src="../images/check.webP" alt="check icon">
-            <div>
-                <h4>User-Centric Approach</h4>
-                 <p>Every line of code we write, every design we create, is with the end user in mind. We prioritize user experience, ensuring that our digital solutions are not only visually stunning but also intuitive and user-friendly. Your satisfaction is our driving force.</p>
-            </div>
+          <input type="checkbox" name="checkbox" id="third" class="input">
+          <label for="third" class="row-label">+</label>
+          <img src="../images/check.webP" alt="check icon">
+          <div class="content">
+              <h4>Innovation at the Core</h4>
+                <p> 
+                At Company X, innovation is not just a buzzword; it's the core of our identity. 
+                We thrive on pushing boundaries, exploring new technologies, and staying ahead of the curve.
+                </p>
+                <p>
+                  Our team of skilled professionals is passionate about crafting solutions that go beyond the ordinary.
+                  At Company X, innovation is not just a buzzword; innovation is not just a buzzword; it's the core of our identity.
+                  At Company X, innovation is not just a buzzword; it's the core of our identity. 
+                </p> 
+                <p>
+                  Our team of skilled professionals is passionate about crafting solutions that go beyond the ordinary.
+                  We thrive on pushing boundaries, exploring new technologies, and staying ahead of the curve.
+                </p>
+          </div>
+        </div>
+    </section>
+    <!-- FAQ section -->
+    <section class="sets main-pad faq">
+      <h3>FAQ's</h3>
+      <p class="discription">At Innovation, we’re transparent and honest at all times.
+      We believe that working with a digital marketing agency should be straightforward and easy,
+      and you should never feel unsure about how we do things.</p>
+      <div class="accordion">
+        <div class="content-box">
+          <div class="label">How long has Innovation in Business ?</div>
+          <div class="content">
+            <p>Our team of skilled professionals is passionate about crafting solutions that go beyond the ordinary.
+            At Company X, innovation is not just a buzzword; innovation is not just a buzzword; it's the core of our identity.
+            At Company X, innovation is not just a buzzword; it's the core of our identity.</p> 
+          </div>
         </div>
 
-        <div class="row">
-            <img src="../images/check.webP" alt="check icon">
-            <div>
-                <h4>Collaboration and Transparency</h4>
-                 <p>We believe in the power of collaboration. Whether it's working closely with our clients or fostering a culture of teamwork within our organization, collaboration is at the heart of our success. We are transparent in our processes, keeping our clients informed and involved at every stage.</p>
-            </div>
+        <div class="content-box">
+          <div class="label">What does Innovation offer ?</div>
+          <div class="content">
+            <p>Our team of skilled professionals is passionate about crafting solutions that go beyond the ordinary.
+            At Company X, innovation is not just a buzzword; innovation is not just a buzzword; it's the core of our identity.
+            At Company X, innovation is not just a buzzword; it's the core of our identity.</p> 
+          </div>
         </div>
-</section>
+
+        <div class="content-box">
+          <div class="label">Is all the work done in-house by Innovation the team ?</div>
+          <div class="content">
+            <p>Our team of skilled professionals is passionate about crafting solutions that go beyond the ordinary.
+            At Company X, innovation is not just a buzzword; innovation is not just a buzzword; it's the core of our identity.
+            At Company X, innovation is not just a buzzword; it's the core of our identity.</p> 
+          </div>
+        </div>
+
+        <div class="content-box">
+          <div class="label">How will Innovation get to understand my Business ?</div>
+          <div class="content">
+            <p>Our team of skilled professionals is passionate about crafting solutions that go beyond the ordinary.
+            At Company X, innovation is not just a buzzword; innovation is not just a buzzword; it's the core of our identity.
+            At Company X, innovation is not just a buzzword; it's the core of our identity.</p> 
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- FAQ's contact section -->
+  <section class="contact main-pad" id="contact">
+    <h3>Do you have a question we haven’t been able to answer?</h3>
+    <p>Get in touch with us and we’ll come back to you shortly.</p>
+    <form>
+      <div class="user-name">
+        <div>
+          <label for="first-name">First Name</label><br>
+          <input type="text" id="first-name" placeholder="first Name">
+        </div>
+        <div>
+          <label for="last-name">Last Name</label><br>
+          <input type="text" id="last-name" placeholder="Last Name">
+        </div>
+      </div>
+      <label for="email"></label>Email<br>
+      <input type="text" id="email" placeholder="Your Email  address ">
+      <label for="subject"></label>Subject<br>
+      <input type="text" id="subject" placeholder="Subject">
+      <label for="message"></label>Message<br>
+      <textarea cols="30" rows="4" id="message" placeholder="Message" style="resize: none;"></textarea>
+      <button type="submit">submit</button>
+    </form>
+  </section>
 
 <!-- Subscription section -->
 <section class="subscription">
@@ -95,7 +229,8 @@
       <form>
         <input type="text" placeholder="Enter Email address" class="email">
         <button>Subscribe</button><br>
-        <input type="checkbox"><span>Don’t provide any promotional message.</span>
+        <input type="checkbox" id="checkbox" />
+        <label for="checkbox"> Don’t provide any promotional message.</label>
       </form>
     </div>
   </div>
@@ -106,6 +241,7 @@
   <div class="container team">
       <div class="col-1">
         <a href="../index.html"><img src="../images/logo.webP" alt="logo" class="logo">Innovation</a>
+        <p>a company offering a rich web experience to visitors.</p>
         <a href="../index.html">Terms of use | Privacy</a>
         <a href="../index.html">Copyright by 2019 YourName, Inc</a>
       </div>

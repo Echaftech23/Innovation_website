@@ -10,25 +10,41 @@
 
     <!-- file of repetitive propertises  -->
     <link rel="stylesheet" href="../main.css">
+    <!-- file js -->
+    <script src="../main.js" defer></script>
+    <script src="./file.js" defer></script>
   </head>
   <body>
     <header class="header">
       <nav class="navbar">
-        <a href="../index.html" class="logo">
-          <img src="../images/logo.webP" alt="logo">
-        </a>
+        <a href="../index.html" class="logo"><img src="../images/logo.webP" alt="logo"></a>
         <a href="../index.html" class="logo-title">Innovation</a>
-        <ul>
+        <ul class="ul menu">
           <li><a href="../index.html">Home</a></li>
-          <li><a href="../advertise/advertise.html">Advertise</a></li>
-          <li><a href="../support/support.html">Support</a></li>
+          <li class="advertise"><a>Advertise <img src="../images/arrow_down.webp" alt="arrow down image" width="12px"></a>
+            <ul class="drop-container">
+              <li><a href="../advertise/advertise.html">Advertise</a></li>
+              <li><a href="../advertise/advertise.html">Service 1</a></li>
+              <li><a href="../advertise/advertise.html">service 2</a></li>
+            </ul>
+        </li>
+        <li class="support"><a>Support <img src="../images/arrow_down.webp" alt="arrow down image" width="12px"></a>
+          <ul class="drop-container">
+            <li><a href="./support/support.html">Support</a></li>
+            <li><a href="./support/support.html">Contact Us</a></li>
+            <li><a href="./support/support.html">Address</a></li>
+          </ul>
+        </li>
           <li><a href="../about/about.html">About</a></li>
         </ul>
       </nav>
-      <div class="buttons">
+      <div class="buttons menu">
         <a href="../login/login.html">Login</a>
-        <a href="../index.html">Get Started <img src="../images/line.webP" alt="line" class="line"></a>
+        <a href="../login/login.html">Get Started <img src="../images/line.webP" alt="line" class="line"></a>
       </div>
+      <!-- menu Buttons -->
+      <button class="menu-icon"><img src="../images/menu.webP" alt="menu icon" width="35px"></button>
+      <button class="close-icon menu"><img src="../images/close.webP" alt="menu icon" width="25px"></button>
     </header>
 
     <!-- Hero section -->
@@ -84,11 +100,11 @@
     <section class="contact main-pad" id="contact">
       <h3>Have a question</h3>
       <h4>Get in touch</h4>
+      <p>
+        Thank you for using Innovation! Please complete the form below,so we
+        can provide quick and efficient service.
+      </p>
       <form>
-        <p>
-          Thank you for using Innovation! Please complete the form below,so we
-          can provide quick and efficient service.
-        </p>
         <div class="user-name">
           <div>
             <label for="first-name">First Name</label><br>
@@ -114,16 +130,13 @@
       <div class="sub-content">
         <div class="left">
           <h3>Like our service? Subscribe us</h3>
-          <p>
-            We have more than thousand of creative entrepreneurs and stat
-            joining our business
-          </p>
+          <p>We have more than thousand of creative entrepreneurs and stat joining our business</p>
         </div>
         <div class="right">
           <form>
             <input type="text" placeholder="Enter Email address" class="email">
-            <button>Subscribe</button><br>
-            <input type="checkbox"><span>Don’t provide any promotional message.</span>
+            <button type="submit">Subscribe</button><br>
+            <input type="checkbox" id="checkbox"><label for="checkbox"> Don’t provide any promotional message.</label>
           </form>
         </div>
       </div>

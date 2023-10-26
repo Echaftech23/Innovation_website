@@ -33,9 +33,9 @@ header{
     padding: 5px 16%;
     background-color: var(--background-color-1);
     position: fixed;
+    top: 0;
     z-index: 1000;
 }
-
 header a{
     color: var(--heading-color);
     font-size: 14px;
@@ -58,24 +58,43 @@ header a{
     padding: 0 30px 0 10px;
 }
 .navbar ul{
-    padding-right: 20px;
+    padding-right: 30px;
 }
 .navbar ul li{
     display: inline-block;
-    padding-left: 35px;
+    padding: 0 20px;
     position: relative;
 } 
-.navbar ul li:nth-child(2)::after, .navbar ul li:nth-child(3)::after{
-    content: "";
-    position: absolute;
-    top: 5px;
-    right: -15px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #000 transparent transparent;
+
+.advertise, .support{
+    position: relative;
 }
+ .drop-container{
+    position: absolute;
+    width: 120px;
+    top: 25px;
+    right: 0;
+    padding: 10px;
+    background-color: rgb(249, 249, 249);
+    display: none;
+}
+.drop-container li{
+    padding: 0 !important;
+    width: 100%;
+}
+.drop-container li a{
+    display: block;
+    min-width: 100%;
+    padding-block: 5px;
+}
+@media only screen and (max-width: 768px) {
+    
+} 
 .navbar ul li a:hover, .buttons a:first-child:hover{
     color: var(--second-color);
+}
+.navbar ul .advertise:hover .drop-container, .navbar ul .support:hover .drop-container{
+    display: block;
 }
 .buttons a:nth-child(2){
     margin-left: 20px;
@@ -89,7 +108,8 @@ header a{
     bottom: -6px;
     left: 0;
 }
-.meni-bar{
+/* menu icons */
+.menu-icon, .close-icon{
     display: none;
 }
 
@@ -171,6 +191,9 @@ footer .container .col-1 a:first-child{
     margin-top: -2px;
     padding-bottom: 20px;
 }
+footer .col-1 p{
+    display: none;
+}
 footer .container .logo{
     padding-right: 10px;
     width: 45px;
@@ -194,14 +217,74 @@ footer .container .col-5 a img{
     header{
         padding: 10px 4%; 
     }
-    .navbar ul, .buttons, .close{
-        display: none;
+    .ul{
+        max-width: 55vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: -60%;
+        text-align: center;
+        padding-top: 100px;
+        background-color: #fff;
+        transition: right 1s ease;
     }
-    .meni-bar{
+    .navbar ul li{
+        width: 100%;
+        margin: 35px auto;
+    }
+    .buttons a{
+        display: block;
+        padding: 10px 30px;
+        text-align: center;
+    }
+    .buttons{
+        position: absolute;
+        height: 100vh;
+        top: 500px;
+        right: -60%; 
+        transition: right 1s ease;
+    }
+    .buttons a:nth-child(2){
+        margin-top: 10px;
+        color: #000;
+    }
+    .buttons a .line{
+        width: 70px;
+        margin-bottom: 5px;
+        margin-left: 30px;
+    }
+    .navbar ul li:nth-child(2)::after, .navbar ul li:nth-child(3)::after{
+        top: 7px;
+        right: 16%;
+    }
+    .menu-icon{
         display: block;
         background: transparent;
         border: none;
     }
+    .close-icon{
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: -42%;
+        z-index: 100;
+        background-color: transparent;
+        border: none;
+        transition: right 1s ease;
+    }
+    .show-menu{
+        display: block;
+    }
+    .show-menu.ul{
+        right: 0%;
+    }
+    .show-menu.close-icon{
+        right: 42%;
+    }
+    .show-menu.buttons{
+        right: 6%;
+    }
+    
     /* -- Subscription section -- */
     .subscription{
         padding: 20px 0;
@@ -233,10 +316,40 @@ footer .container .col-5 a img{
     footer .container{
         flex-wrap: wrap;
     }
-    footer .col-1, .col-2, .col-3, .col-4, .col-5{
+    footer .col-1{
         width: 100%;
     }
-    footer .container h4{
-        padding-bottom: 15px;
+    .col-2, .col-3, .col-4, .col-5{
+        width: 45%;
     }
+    footer .container a{
+        display: block;
+        color: #000;
+    }
+    footer .col-1 p{
+        display: block;
+        padding-left: 30px;
+        margin-bottom: 20px;
+    }
+    footer .col-1 a{
+        text-align: center;
+        width: 100%;
+    }
+    /* drop Down */
+    .drop-container{
+        width: 100%;
+        background: none;
+        top: 0;
+        position: absolute;
+        background: #fff;
+        z-index: 100;
+        margin: 45px auto;
+    }
+    .navbar .drop-container li {
+        margin: 10px auto;
+    }
+    .navbar ul {
+        padding-right: 0 ;
+    }
+
 }
